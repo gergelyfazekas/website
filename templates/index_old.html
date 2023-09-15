@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Data Analyst Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Data Analyst Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="http://localhost:8081" target="_blank">Chart Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <img src="{{ url_for('static', filename='photo_GergelyFazekas.jpeg') }}" alt="GergelyFazekas">
+            <h2>Gergely Fazekas</h2>
+        </section>
+
+        <section class="description">
+            <h3>About Me</h3>
+            <p>
+                Write a brief and engaging description about yourself as a data analyst. 
+Highlight your skills,
+                experience, and any other relevant information that would interest potential 
+employers or clients.
+            </p>
+        </section>
+
+        <section class="buttons">
+            <a href="https://www.linkedin.com/in/gergely-fazekas-642abb14b/" class="btn">LinkedIn</a>
+            <a href="https://github.com/gergelyfazekas" class="btn">GitHub</a>
+        </section>
+    </main>
+    <gradio-app src="https://gfazekas-chart.hf.space"></gradio-app>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+    <script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/3.35.2/gradio.js"
+    ></script>
+
+</body>
+</html>
+
